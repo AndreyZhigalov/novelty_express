@@ -1,7 +1,7 @@
 # NOVELTY EXPRESS
 ⭐https://andreyzhigalov.github.io/novelty_express/ ⭐
 
-🚀СТЕК:
+🚀СТЕК: \
 ✅ React \
 ✅ Typescript \
 ✅ Redux Toolkit \
