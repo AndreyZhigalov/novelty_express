@@ -1,0 +1,93 @@
+@import '../../service.scss';
+
+.ourCarPark {
+  @include sectionAlign();
+  @include sectionHeader();
+  padding-top: 85px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: $secondSectionBGColor;
+  header {
+    width: 100%;
+  }
+  img {
+    &:first-of-type {
+      @include bigCardSize();
+    }
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      @include middleCardSize();
+    }
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      @include smallCardSize();
+    }
+  }
+  &__card {
+    @include bigCardSize();
+    background-color: $cardBackgroundColor;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 28px;
+    &-wrapper {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    p {
+      @include sectionText();
+      color: $cardTextColor;
+    }
+
+    &-divider {
+      position: relative;
+      top: -4px;
+      margin: 0 5px;
+      flex: 1;
+      border-bottom: 1px solid $cardTextColor;
+    }
+    span {
+      @include sectionText();
+      color: $cardHeaderColor;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+  @media (max-width: 1280px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: center;
+    gap: 20px;
+    
+  }
+  @media (max-width: 1100px) {
+  }
+  @media (max-width: 680px) {
+    img {
+      display: none;
+      &:first-of-type {
+        display: block;
+      }
+    }
+    &__card {
+      p {
+        width: min-content;
+      }
+      &-wrapper {
+        align-items: center;
+
+        &:first-of-type {
+          p {
+            width: max-content;
+          }
+        }
+      }
+      &-divider {
+        border: 1px solid transparent;
+      }
+    }
+  }
+}

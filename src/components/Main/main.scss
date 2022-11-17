@@ -1,0 +1,237 @@
+@import '../../service.scss';
+
+.main {
+  position: relative;
+  height: 660px;
+  display: grid;
+  grid-template-columns: minmax(320px, 550px) 1fr;
+  grid-template-rows: 1fr;
+  justify-items: left;
+  align-items: center;
+  @include sectionAlign();
+  &-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    &_fill {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(174.91deg, #238cc6 3.68%, #439aca 95.91%);
+    }
+    &_fill2 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(174.91deg, #4b9fce 3.68%, #3ca9e4 95.91%);
+    }
+    img[alt='deliveryRightSnow'] {
+      position: absolute;
+      width: 1200px;
+      height: 795.71px;
+      left: -300px;
+      top: -130px;
+    }
+    img[alt='deliveryLeftSnow'] {
+      position: absolute;
+      width: 601.8px;
+      height: 703.06px;
+      right: 0px;
+      top: 240px;
+      transform: matrix(0.41, -0.87, 0.98, 0.34, 0, 0);
+    }
+    &_elipse-gradient1 {
+      background: radial-gradient(27.64% 28.37% at 50% 50%, #0076b7 0%, rgba(19, 155, 214, 0) 100%);
+      opacity: 0.59;
+      transform: matrix(0.94, -0.26, 0.34, 0.96, 0, 0);
+    }
+    &_elipse-gradient2 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -387.79px;
+      top: -0.33px;
+      background: radial-gradient(
+        27.64% 28.37% at 50% 50%,
+        #75ceff 0%,
+        rgba(173, 230, 255, 0) 100%
+      );
+      opacity: 0.59;
+      transform: matrix(0.94, -0.26, 0.34, 0.96, 0, 0);
+    }
+    &_elipse-gradient3 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -1000.77px;
+      top: 496.53px;
+      background: radial-gradient(
+        27.64% 28.37% at 50% 50%,
+        #75ceff 0%,
+        rgba(173, 230, 255, 0) 100%
+      );
+      opacity: 0.59;
+      transform: matrix(0.94, -0.26, 0.34, 0.96, 0, 0);
+    }
+  }
+  article {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 25px;
+    header {
+      font-weight: 600;
+      font-size: 52px;
+      line-height: 104%;
+      letter-spacing: -1.5px;
+      color: #ffffff;
+      span {
+        font-style: italic;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 114.5%;
+      letter-spacing: -1.5px;
+      color: #ffffff;
+    }
+    .form-button {
+      @include sendFormButton();
+      width: 248px;
+      height: 52px;
+      background: $mainSectionBGColor;
+      font-weight: 600;
+      font-size: 19px;
+      line-height: 19px;
+      letter-spacing: -0.02em;
+      color: #3494c8;
+      &:hover {
+        background-color: $secondSectionBGColor;
+      }
+      &::after {
+        content: url('../../assets/img/icons/form_list_blue.svg');
+        position: absolute;
+        right: 16px;
+        top: 13px;
+      }
+    }
+  }
+  .delivery-cover {
+    position: relative;
+    z-index: 4;
+    justify-self: start;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    &__icon {
+      z-index: 3;
+      position: absolute;
+      width: 207px;
+      height: 39px;
+      background: #58bff8;
+      border-radius: 75px;
+      text-align: center;
+      padding: 10px 0 0 26px;
+      top: 32px;
+      left: 28px;
+      &::before {
+        content: url('../../assets/img/icons/lightning.svg');
+        position: absolute;
+        top: 5px;
+        left: 15px;
+      }
+    }
+    &__icon_shadow {
+      z-index: 1;
+      position: absolute;
+      width: 207px;
+      height: 39px;
+      top: 40px;
+      left: 36px;
+      background: #2c96d0;
+      border-radius: 75px;
+      transform: rotate(-4deg);
+    }
+    img[alt='Доставщик'] {
+      max-width: 837px;
+      max-height: 532px;
+      width: 100%;
+      border-radius: 20px;
+    }
+  }
+  @media (max-width: 1280px) {
+    .delivery-cover {
+      padding: 0px 20px;
+    }
+  }
+  @media (max-width: 1100px) {
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+    article {
+      header {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 104%;
+        letter-spacing: -1.5px;
+      }
+    }
+    .delivery-cover {
+      padding: 0%;
+      margin: 0 auto;
+      height: 100%;
+      &__icon {
+        display: none;
+      }
+      &__icon_shadow {
+        display: none;
+      }
+      img[alt='Доставщик'] {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 680px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 265px 170px;
+    padding: 0;
+    padding-top: 42px;
+    padding-bottom: 0;
+    justify-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    article {
+      header {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 104%;
+        letter-spacing: -1.5px;
+      }
+    }
+    &-background {
+      top: 0px;
+    }
+    .delivery-cover {
+      position: relative;
+      bottom: -25px;
+      height: 239px;
+      width: calc(100% - 48px);
+      object-fit: cover;
+      border-radius: 20px;
+      overflow: hidden;
+      img[alt='Доставщик'] {
+        width: 100%;
+      }
+    }
+  }
+}

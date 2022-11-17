@@ -1,0 +1,248 @@
+@import '../../service.scss';
+
+.how {
+  position: relative;
+  @include sectionAlign();
+  @include sectionHeader();
+  @include sectionGrid();
+  align-items: center;
+  grid-template-rows: 130px calc(534px - 130px);
+  header {
+    z-index: 2;
+    color: #ffffff;
+  }
+  &-background {
+    position: absolute;
+    max-width: 1680px;
+    width: 100%;
+    min-height: 534px;
+    background: linear-gradient(95.22deg, #4b9fce 0.97%, #68b8e3 26.74%, #45a6da 98.18%);
+    overflow: hidden;
+    align-self: flex-start;
+    &_fill {
+      position: absolute;
+      width: 1680px;
+      height: 534px;
+      background: linear-gradient(95.22deg, #4b9fce 0.97%, #68b8e3 26.74%, #45a6da 98.18%);
+    }
+    &_fill2 {
+      position: absolute;
+      width: 1900.26px;
+      height: 859.11px;
+      background: radial-gradient(27.64% 28.37% at 50% 50%, #0076b7 0%, rgba(19, 155, 214, 0) 100%);
+      opacity: 0.59;
+      transform: matrix(0.95, -0.3, 0.3, 0.95, 0, 0);
+    }
+    img[alt='howRightSnow'] {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    img[alt='howLeftSnow'] {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    img[alt='roadTrack'] {
+      position: absolute;
+      left: 337px;
+      top: 270px;
+    }
+  }
+  &-card {
+    position: relative;
+    width: 290px;
+    height: 259.69px;
+    background: #f9f9f9;
+    border-radius: 17px;
+    display: flex;
+    align-items: flex-end;
+    padding: 27px 18px;
+    &:first-of-type {
+      img {
+        left: 50px;
+      }
+    }
+    img {
+      position: absolute;
+      top: -35px;
+    }
+    p {
+      position: relative;
+      background: #439aca;
+      border-radius: 75px;
+      padding: 11px 32px 11px 60px;
+      color: #ffffff;
+      span {
+        top: 10px;
+        left: 10px;
+        position: absolute;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: -0.03em;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        padding: 9px;
+        border-radius: 50%;
+      }
+      strong {
+        font-weight: 700;
+      }
+    }
+    &:last-of-type {
+      position: relative;
+      width: 324px;
+      height: 434px;
+      background-color: transparent;
+      padding: 0px 66px 33px 29px;
+      .how-card__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background: #44a1d5;
+        border-radius: 17px;
+        img[alt='cardBgSnow'] {
+          z-index: 7;
+          position: absolute;
+          width: 324px;
+          height: 434px;
+          top: 0px;
+          left: 0px;
+          overflow: hidden;
+        }
+      }
+      .how-card__background_shadow {
+        z-index: 0;
+        position: absolute;
+        width: 315.88px;
+        height: 414.37px;
+        top: 40px;
+        left: 30px;
+        background: #2a88bc;
+        border-radius: 17px;
+        transform: matrix(1, 0.1, -0.05, 1, 0, 0);
+      }
+      img {
+        z-index: 2;
+        position: absolute;
+        top: -100px;
+        left: -20px;
+      }
+      p {
+        z-index: 2;
+        position: unset;
+        background: transparent;
+        border-radius: unset;
+        padding: 0;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 114.5%;
+      }
+    }
+  }
+
+  @media (max-width: 1100px) {
+    height: 100%;
+    grid-template-rows: 120px 1fr;
+
+    gap: 30px 0;
+    overflow: hidden;
+    header {
+      align-self: flex-start;
+    }
+    &-background {
+      height: 100%;
+      &_fill {
+        height: 100%;
+      }
+      &_fill2 {
+        height: 100%;
+      }
+      img[alt='howRightSnow'] {
+        display: none;
+      }
+      img[alt='howLeftSnow'] {
+        display: none;
+      }
+      img[alt='roadTrack'] {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 680px) {
+    grid-template-rows: 50px 1fr;
+    justify-items: start;
+    padding: 50px 0 0;
+    gap: 0;
+    header {
+      padding-left: 30px;
+    }
+    &-background {
+      img[alt='roadTrack'] {
+        display: none;
+      }
+      img[alt='howLeftSnow'] {
+        display: none;
+      }
+    }
+    &-card {
+      border-radius: unset;
+      background: transparent;
+      height: 60px;
+      padding: 0%;
+      align-items: center;
+      width: 100%;
+      img {
+        display: none;
+      }
+      p {
+        padding: 10px 30px 10px 80px;
+
+        background: transparent;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 19px;
+        span {
+          top: px;
+          left: 30px;
+        }
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      &:last-of-type {
+        margin-top: 30px;
+        position: relative;
+        width: 100%;
+        height: 390px;
+        background-color: transparent;
+        padding: 0px 65px 42px 30px;
+        justify-content: start;
+        align-items: flex-end;
+        .how-card__background {
+          border-radius: unset;
+          img[alt='cardBgSnow'] {
+            display: none;
+          }
+        }
+        .how-card__background_shadow {
+          display: none;
+        }
+        img {
+          display: block;
+          z-index: 2;
+          top: -80px;
+          left: 10px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,190 @@
+@import '../../service.scss';
+
+.dangerous-cargo {
+  @include sectionAlign();
+  @include sectionGrid();
+  @include sectionHeader();
+  grid-template-columns: 1fr 1fr;
+  min-height: 1065px;
+  background-color: $thirdSectionBgColor;
+  position: relative;
+  header {
+    width: 100%;
+    height: 92px;
+    @include sectionHeader();
+    color: $mainSectionBGColor;
+    z-index: 1;
+  }
+  &__background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: linear-gradient(95.22deg, #4b9fce 0.97%, #68b8e3 26.74%, #45a6da 98.18%);
+    img[alt='cargoRightSnow'] {
+      position: absolute;
+      width: 824.77px;
+      height: 888.86px;
+      right: 0;
+      top: -100px;
+      transform: rotate(10deg);
+    }
+    img[alt='cargoLeftSnow'] {
+      position: absolute;
+      width: 997.86px;
+      height: 813.49px;
+      left: 0;
+      top: 0;
+    }
+    img[alt='cargoBottomSnow'] {
+      position: absolute;
+      width: 742.26px;
+      height: 872.36px;
+      left: 300px;
+      bottom: -200px;
+    }
+  }
+  article {
+    position: relative;
+    max-width: 682px;
+    width: 100%;
+    height: 732px;
+    background-color: $cardBackgroundColor;
+    padding: 42px 48px;
+    border-radius: 20px;
+    &:last-of-type {
+      background-color: #2a88bc;
+      header {
+        color: white;
+      }
+      p {
+        color: white;
+      }
+      ul {
+        width: 100%;
+        li {
+          margin: 0;
+          color: white;
+          &::before {
+            color: white;
+          }
+        }
+      }
+      &::before {
+        position: absolute;
+        content: url('../../assets/img/covers/car.png');
+        bottom: -280px;
+        right: 80px;
+        z-index: 1;
+      }
+    }
+    header {
+      @include cardHeader();
+      font-size: 36px;
+      color: #505457;
+    }
+    p {
+      @include sectionText();
+      color: #505457;
+      padding-bottom: 32px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 23px;
+      width: 549px;
+      height: 429px;
+      li {
+        position: relative;
+        @include sectionText();
+        font-weight: 600;
+        color: #505457;
+        list-style: none;
+        padding-left: 20px;
+        @include liDot();
+      }
+    }
+  }
+  @media (max-width: 1280px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+    justify-items: center;
+    gap: 30px;
+    padding: 50px;
+    padding-bottom: 290px;
+    &__background {
+      img[alt='cargoRightSnow'] {
+        display: none;
+      }
+      img[alt='cargoLeftSnow'] {
+      }
+      img[alt='cargoBottomSnow'] {
+        left: unset;
+        right: -150px;
+      }
+    }
+    header {
+      align-self: flex-end;
+
+    }
+    article {
+      header {
+        display: block;
+      }
+    }
+  }
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+    justify-items: center;
+    gap: 30px;
+    padding: 50px 0px 250px;
+    header {
+      align-self: flex-end;
+      padding-left: 20px;
+    }
+    &__background {
+      img[alt='cargoBottomSnow'] {
+        display: none;
+      }
+    }
+    article {
+      padding: 24px;
+      padding-bottom: 50px;
+      width: 328px;
+      height: max-content;
+      &:last-of-type {
+        &::before {
+          position: absolute;
+          content: url('../../assets/img/covers/car.png');
+          bottom: -320px;
+          left: -100px;
+          right: unset;
+          z-index: 1;
+          transform: scale(60%);
+        }
+      }
+      header {
+        height: 60px;
+        font-size: 22px;
+        padding-left: 0;
+      }
+      p {
+        font-size: 18px;
+      }
+      ul {
+        gap: 20px;
+        width: 100%;
+        height: 100%;
+        li {
+          font-size: 17px;
+          &::before {
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@import '../../service.scss';
+
+.ourMission {
+  @include sectionAlign();
+  @include flexBetween();
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 30px;
+  article {
+    @include bigCardSize();
+    display: flex;
+    background-color: $mainSectionBGColor;
+    height: 363px;
+    padding: 0px 0 0px 48px;
+    justify-content: space-between;
+    &:first-of-type {
+      flex-direction: column;
+      padding: 108px 48px 32px;
+      justify-content: flex-start;
+    }
+    &:last-of-type {
+      align-items: center;
+      gap: 10px;
+
+      div {
+        header {
+          width: 150px;
+        }
+      }
+    }
+    figure {
+      position: absolute;
+      top: 38px;
+      left: 48px;
+      background-color: $mainElementColor;
+      width: 130px;
+      height: 58px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      img[alt='icon'] {
+      }
+      img[alt='cover'] {
+        height: 100%;
+      }
+    }
+    header {
+      @include cardHeader();
+      margin-bottom: 18px;
+      
+    }
+    p {
+      @include sectionText();
+      color: $secondTextColor;
+      strong {
+      }
+      span {
+        display: none;
+        border-bottom: 1px solid $secondTextColor;
+        font-weight: 600;
+      }
+    }
+    ul {
+      li {
+        position: relative;
+        @include sectionText();
+        @include liDot();
+        list-style: none;
+        padding-left: 30px;
+        font-weight: 600;
+        margin-top: 27px;
+         color: $secondTextColor;
+      }
+    }
+  }
+  @media (max-width: 1280px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    article {
+      height: 100%;
+    }
+  }
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
+  @media (max-width: 680px) {
+    article {
+      padding: 24px;
+      &:first-of-type {
+        padding: 84px 24px 24px;
+      }
+      &:last-of-type {
+        div {
+          header {
+            width: 100%;
+          }
+        }
+        li {
+          margin-top: 20px;
+        }
+        img {
+          display: none;
+        }
+      }
+      figure {
+        width: 90px;
+        height: 40px;
+        top: 24px;
+        left: 24px;
+      }
+      p {
+        span {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

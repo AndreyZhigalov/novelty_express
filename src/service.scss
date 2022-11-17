@@ -1,0 +1,200 @@
+$mainElementColor: #439aca;
+$mainElementHoverColor: #52aee0;
+$mainTextColor: #505457;
+$mainTextHoverColor: #439aca;
+$secondElementColor: #728d9b;
+$secondElementHoverColor: #439aca;
+$secondTextColor: #505457;
+$secondTextHoverColor: #728d9b;
+$cardHeaderColor: #439aca;
+$cardTextColor: #728d9b;
+$cardBackgroundColor: #f9f9f9;
+$cursorColor: #0c5971;
+$mainSectionBGColor: #ffffff;
+$secondSectionBGColor: #f3f3f3;
+$thirdSectionBgColor: #439aca;
+$mainPageBGColor: #ffffff;
+$elementShadow: 0px 4px 41px rgba(0, 0, 0, 0.05);
+
+@mixin pageBasic {
+  max-width: 1680px;
+  width: 100%;
+  padding-top: 111px;
+  background-color: $mainPageBGColor;
+  @media (max-width: 1100px) {
+    padding-top: 60px;
+  }
+}
+
+@mixin navbarLink {
+  text-decoration: none;
+  color: $mainTextColor;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 19px;
+}
+
+@mixin activeNavbarLinkColor {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 19px;
+  color: $mainTextHoverColor;
+}
+
+@mixin flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin sendFormButton {
+  position: relative;
+  background-color: $mainElementColor;
+  color: $mainPageBGColor;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding-left: 16px;
+  cursor: pointer;
+  &:hover {
+    background-color: $mainElementHoverColor;
+  }
+  &::after {
+    content: url('./assets/img/icons/form_list.svg');
+    position: absolute;
+    right: 16px;
+    top: 13px;
+  }
+}
+
+@mixin sectionAlign {
+  padding: 0 140px;
+  width: 100%;
+  @media (max-width: 1280px) {
+    padding: 0 50px;
+  }
+  @media (max-width: 1100px) {
+    padding: 50px;
+  }
+  @media (max-width: 680px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@mixin sectionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
+  grid-template-rows: 216px 1fr;
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr;
+    justify-items: center;
+  }
+}
+
+@mixin sectionHeader {
+  header {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 104%;
+    letter-spacing: -1.5px;
+    color: $mainTextColor;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    align-self: center;
+    justify-self: start;
+  }
+  @media (max-width: 680px) {
+    header {
+      font-size: 30px;
+      justify-self: start;
+    }
+  }
+}
+
+@mixin sectionText {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 114.5%;
+  letter-spacing: -1px;
+  strong {
+    font-weight: 700;
+  }
+}
+
+@mixin cardCaption {
+  figcaption {
+    height: 100%;
+    color: $mainTextColor;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 114.5%;
+    letter-spacing: -1px;
+    padding: 0 27px 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  @media (max-width: 680px) {
+    figcaption {
+      padding: 19px 50px 19px 24px;
+      font-size: 19px;
+    }
+  }
+}
+
+@mixin cardHeader() {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 104%;
+  letter-spacing: -1.5px;
+  color: $secondTextColor;
+  @media (max-width: 680px) {
+    font-size: 26px;
+  }
+}
+
+@mixin bigCardSize {
+  position: relative;
+  max-width: 687px;
+  width: 100%;
+  box-shadow: 0px 4px 41px rgba(0, 0, 0, 0.05);
+  border-radius: 17px;
+  overflow: hidden;
+  background: $cardBackgroundColor;
+}
+
+@mixin middleCardSize {
+  position: relative;
+  width: 324px;
+  background: $cardBackgroundColor;
+  border-radius: 17px;
+  overflow: hidden;
+  @media (max-width: 680px) {
+    width: 324px;
+    height: 240px;
+  }
+}
+
+@mixin smallCardSize {
+  position: relative;
+  width: 324px;
+  height: 219px;
+  border-radius: 17px;
+  overflow: hidden;
+  background: $cardBackgroundColor;
+}
+
+@mixin liDot {
+  &::before {
+    content: '\2022';
+    color: $mainElementColor;
+    font-size: 2em;
+    position: absolute;
+    left: 0px;
+    top: -3px;
+  }
+}

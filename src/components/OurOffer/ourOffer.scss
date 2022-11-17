@@ -1,0 +1,97 @@
+@import '../../service.scss';
+
+.our-offer {
+  min-height: 660px;
+  @include sectionGrid();
+  @include sectionAlign();
+  @include sectionHeader();
+  grid-gap: 20px;
+  padding-bottom: 50px;
+  justify-items: center;
+  header {
+    width: 440px;
+  }
+  &__card {
+    @include middleCardSize();
+    @include cardCaption();
+    height: 500px;
+    background: $mainSectionBGColor;
+    display: flex;
+    flex-direction: column;
+    &_small {
+      @include smallCardSize();
+      height: 240px;
+      background: $mainSectionBGColor;
+      display: flex;
+      flex-direction: column;
+      &-cover {
+        height: 155px;
+      }
+      &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      @include cardCaption();
+    }
+
+    &_radioactive-icon,
+    &_fire-icon {
+      position: absolute;
+      padding: 5px;
+      width: 58px;
+      height: 58px;
+      background: $mainElementColor;
+      border-radius: 10px;
+      top: 22px;
+      left: 18px;
+    }
+    &_radioactive-icon {
+      background: #152833;
+    }
+    &-cover {
+      width: 324px;
+      height: 366px;
+    }
+  }
+  @media (max-width: 1100px) {
+    padding-top: 0px;
+  }
+  @media (max-width: 680px) {
+    grid-gap: 16px;
+    padding: 0px;
+    padding-top: 50px;
+    justify-content: center;
+    header {
+      padding-left: 20px;
+
+      width: 250px;
+    }
+    &__card {
+      flex-direction: column-reverse;
+      &_radioactive-icon,
+      &_fire-icon {
+        width: 44px;
+        height: 44px;
+        right: 24px;
+        left: unset;
+        top: 35px;
+      }
+      &-cover {
+        object-fit: cover;
+        height: 132px;
+      }
+      &_small {
+        flex-direction: column-reverse;
+        &-cover {
+          object-fit: cover;
+          height: 132px;
+        }
+      }
+    }
+
+    .our-offer__card_small-container {
+      gap: 30px;
+    }
+  }
+}

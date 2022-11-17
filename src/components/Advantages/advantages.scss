@@ -1,0 +1,32 @@
+@import '../../service.scss';
+
+.advantages {
+  @include sectionAlign();
+  @include sectionHeader();
+  @include sectionGrid();
+  grid-template-columns: repeat(auto-fit, minmax(324px, 683px));
+  grid-template-rows: 50px 1fr;
+  gap: 30px;
+  padding-bottom: 50px;
+  header {
+  }
+  article {
+    padding: 30px;
+    @include bigCardSize();
+    min-height: 192px;
+    background: $cardBackgroundColor;
+    header {
+        padding: 0 0 5px 0;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 104%;
+      letter-spacing: -1px;
+      color: $cardHeaderColor;
+    }
+    p {
+      @include sectionText();
+      font-weight: 400;      
+      color: $cardTextColor;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import '../../service.scss';
+
+.our-partners {
+  @include sectionAlign();
+  @include sectionHeader();
+  @include sectionGrid();
+  grid-template-columns: repeat(auto-fit, 156px);
+  grid-template-rows: 100px 1fr;
+  gap: 20px;
+  background-color: $mainSectionBGColor;
+  header {
+    align-self: flex-end;
+  }
+  img {
+    width: 157px;
+    height: 151px;
+  }
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(auto-fit, 140px);
+    align-items: center;
+  }
+
+  @media (max-width: 680px) {
+    overflow: scroll;
+    grid-template-columns: repeat(2, 156px);
+    grid-template-rows: 30px 160px;
+    gap: 0px;
+    img {
+      display: none;
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: block;
+      }
+    }
+  }
+}

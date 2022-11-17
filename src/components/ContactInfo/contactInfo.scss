@@ -1,0 +1,142 @@
+@import '../../service.scss';
+
+.contact-info {
+  @include sectionAlign();
+  @include sectionHeader();
+  @include sectionGrid();
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 100px 1fr;
+
+  gap: 39px;
+  header {
+    width: 300px;
+    color: $mainTextColor;
+  }
+  article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    div {
+      @include bigCardSize();
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      max-width: 476px;
+      max-height: 144px;
+      height: 100%;
+      padding: 30px 48px;
+      background-color: $mainPageBGColor;
+      h2 {
+        @include cardHeader();
+        font-size: 24px;
+        align-self: flex-start;
+        color: $mainTextColor;
+      }
+      p {
+        position: relative;
+        @include sectionText();
+        width: 100%;
+        padding-left: 30px;
+        font-size: 21px;
+        color: $mainTextColor;
+        &::before {
+          position: absolute;
+          left: 0;
+        }
+        strong {
+          color: $mainTextColor;
+        }
+      }
+      &:nth-of-type(1) {
+        p {
+          &::before {
+            content: url('../../assets/img/icons/phone.svg');
+          }
+          &:last-of-type {
+            &::before {
+              content: url('../../assets/img/icons/mail.svg');
+            }
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        p {
+          &::before {
+            content: url('../../assets/img/icons/locationPoint.svg');
+          }
+        }
+      }
+      &:nth-of-type(3) {
+        p {
+          &::before {
+            content: url('../../assets/img/icons/clock.svg');
+          }
+        }
+      }
+    }
+  }
+  figure {
+    position: relative;
+    max-width: 890px;
+    width: 100%;
+    max-height: 492px;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &::before {
+      content: url('../../assets/img/icons/mapPin.svg');
+      position: absolute;
+      top: calc(50% - 80px);
+      left: calc(50% - 45px);
+      z-index: 1;
+    }
+  }
+  @media (max-width: 1100px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+  }
+  @media (max-width: 680px) {
+    padding: 24px 15px;
+    article {
+      div {
+        height: max-content;
+        padding: 0;
+        border-radius: unset;
+        background-color: transparent;
+        background: transparent;
+        box-shadow: none;
+
+        p {
+          @include smallCardSize();
+          background: $mainPageBGColor;
+          box-shadow: $elementShadow;
+          height: max-content;
+          width: 328px;
+          min-height: 75px;
+          padding: 26px 26px 26px 59px;
+          color: $mainTextColor;
+          font-size: 19px;
+          &::before {
+            position: absolute;
+            left: 24px;
+          }
+        }
+      }
+    }
+    img {
+      @include middleCardSize();
+      object-fit: cover;
+      min-height: 398px;
+    }
+  }
+}

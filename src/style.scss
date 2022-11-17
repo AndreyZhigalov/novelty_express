@@ -1,0 +1,43 @@
+@import "./service.scss";
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 5px; 
+}
+
+*::-webkit-scrollbar-track {
+  background: $mainPageBGColor; 
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $mainPageBGColor;
+  border-radius: 10px; 
+  border: none; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: auto;
+  max-width: 1680px;
+}
+
+a {
+  text-decoration: none;
+  color: $secondTextColor;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

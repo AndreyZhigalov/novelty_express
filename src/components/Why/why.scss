@@ -1,0 +1,200 @@
+@import '../../service.scss';
+
+.why {
+  @include sectionAlign();
+  @include sectionHeader();
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 20px;
+  justify-content: center;
+  padding-bottom: 50px;
+  header {
+    width: 100%;
+    justify-self: start;
+  }
+  &-card {
+    @include middleCardSize();
+    background-color: #f9f9f9;
+    height: 400px;
+    padding: 28px;
+    width: minmax(324px, 682.51px);
+    header {
+      font-weight: 600;
+      @include sectionText();
+      color: $cardTextColor;
+    }
+    p {
+      @include sectionText();
+      color: $cardTextColor;
+    }
+    &_small {
+      @include smallCardSize();
+      height: 194px;
+      padding: 28px;
+      background-color: #f9f9f9;
+      p {
+        margin-top: 24px;
+        @include sectionText();
+        color: $cardTextColor;
+      }
+      &:last-of-type {
+        .why__card-icons {
+          position: relative;
+          &::after {
+            position: absolute;
+            content: url('../../assets/img/icons/snow.svg');
+            top: 0px;
+            left: 25px;
+          }
+        }
+      }
+    }
+    img {
+      width: 100%;
+    }
+    &:first-of-type {
+      @include bigCardSize();
+      width: 100%;
+      h2 {
+        height: 209px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 128px;
+        line-height: 104%;
+        letter-spacing: -1.5px;
+        color: #439aca;
+        background: radial-gradient(50% 50% at 50% 50%, #c4eaff 0%, rgba(185, 230, 255, 0) 100%);
+        span {
+          font-weight: 600;
+          font-style: italic;
+          font-size: 48px;
+          letter-spacing: -1.5px;
+          line-height: 250px;
+          width: 40px;
+          color: #439aca;
+          align-self: flex-start;
+        }
+      }
+      p {
+@include sectionText();
+        color: $cardTextColor;
+        margin-top: 30px;
+      }
+    }
+    &:nth-child(4) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      overflow: unset;
+      img {
+        position: absolute;
+        width: 250px;
+        top: -60px;
+        left: 50px;
+      }
+    }
+    &:nth-child(5) {
+      h3 {
+        font-style: italic;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 104%;
+        letter-spacing: -1px;
+        color: $cardHeaderColor;
+        margin-bottom: 10px;
+      }
+      p {
+        position: relative;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        span {
+          position: absolute;
+          right: 0;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 114.5%;
+          letter-spacing: -1px;
+          color: $cardHeaderColor;
+        }
+      }
+      p:first-of-type {
+        margin-bottom: 38px;
+      }
+    }
+    &:nth-child(6),
+    &:nth-child(7) {
+      padding: 0;
+    }
+    &:last-child {
+      @include bigCardSize();
+      width: 100%;
+      .why-card__large-cover {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+    @media (max-width: 680px) {
+      flex-direction: column;
+      @include smallCardSize();
+      height: 100%;
+      width: 328px;
+      padding: 25px;
+      p {
+        font-size: 18px;
+      }
+      &:first-of-type {
+        h2 {
+          font-weight: 600;
+          font-size: 46px;
+          width: 100%;
+          justify-content: flex-start;
+          background: none;
+          height: 80px;
+          span {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 90px;
+            width: 30px;
+          }
+        }
+        header {
+          padding: 0;
+        }
+      }
+      &_small {
+        padding: 25px;
+        height: 100%;
+        p {
+          font-size: 18px;
+          margin-top: 5px;
+        }
+      }
+      &:nth-child(4) {
+        padding-left: 110px;
+        font-size: 18px;
+        overflow: unset;
+        order: 5;
+        img {
+          width: 105px;
+          top: -20px;
+          left: 0px;
+        }
+      }
+      &:nth-child(6),
+      &:nth-child(7) {
+        display: none;
+      }
+    }
+  }
+  &__card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    width: 324px;
+  }
+}

@@ -1,0 +1,177 @@
+@import '../../service.scss';
+
+.ourLisence {
+  position: relative;
+  @include sectionAlign();
+  @include flexBetween();
+  z-index: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    &_fill {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(174.91deg, #238cc6 3.68%, #439aca 95.91%);
+    }
+    &_fill2 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(174.91deg, #4b9fce 3.68%, #3ca9e4 95.91%);
+    }
+    img[alt='licenseRightSnow'] {
+      position: absolute;
+      width: 1200px;
+      height: 795.71px;
+      left: -300px;
+      top: -130px;
+    }
+    img[alt='licenseLeftSnow'] {
+      position: absolute;
+      width: 601.8px;
+      height: 703.06px;
+      right: 0px;
+      top: 240px;
+      transform: matrix(0.41, -0.87, 0.98, 0.34, 0, 0);
+    }
+    &_elipse-gradient1 {
+      background: radial-gradient(27.64% 28.37% at 50% 50%, #0076b7 0%, rgba(19, 155, 214, 0) 100%);
+      opacity: 0.59;
+      transform: matrix(0.94, -0.26, 0.34, 0.96, 0, 0);
+    }
+    &_elipse-gradient2 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -387.79px;
+      top: -0.33px;
+      background: radial-gradient(
+        27.64% 28.37% at 50% 50%,
+        #75ceff 0%,
+        rgba(173, 230, 255, 0) 100%
+      );
+      opacity: 0.59;
+      transform: matrix(0.94, -0.26, 0.34, 0.96, 0, 0);
+    }
+    &_elipse-gradient3 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -1000.77px;
+      top: 496.53px;
+      background: radial-gradient(
+        27.64% 28.37% at 50% 50%,
+        #75ceff 0%,
+        rgba(173, 230, 255, 0) 100%
+      );
+      opacity: 0.59;
+      transform: matrix(0.94, -0.26, 0.34, 0.96, 0, 0);
+    }
+  }
+  article {
+    z-index: 1;
+    @include sectionHeader();
+    max-width: 585px;
+    width: 100%;
+    header {
+      color: $mainSectionBGColor;
+      margin-bottom: 20px;
+    }
+    p {
+      @include sectionText();
+      color: $mainSectionBGColor;
+    }
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+    padding: 0px 40px 20px;
+    &-slide {
+      
+      img {
+        width: 100%;
+      }
+    }
+    &-button-prev,
+    &-button-next {
+      background-color: $mainSectionBGColor;
+      border-radius: 10px;
+      width: 58px;
+      height: 58px;
+      &::after {
+        content: url('../../assets/img/icons/arrowhead.svg');
+        height: 100%;
+      }
+    }
+    &-button-next {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+    &-pagination {
+      bottom: 0;
+      &-bullet {
+        &-active {
+          background-color: $mainSectionBGColor;
+        }
+      }
+    }
+  }
+  @media (max-width: 1280px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    article {
+      max-width: 450px;
+    }
+  }
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    padding-top: 45px;
+    article {
+      margin-bottom: 45px;
+    }
+  }
+  @media (max-width: 680px) {
+    padding-bottom: 25px;
+    article {
+      margin-bottom: 45px;
+    }
+    .swiper {
+      padding: 0;
+      width: 100%;
+      height: 500px;
+      &-slide {
+        height: 468px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &-button-prev,
+      &-button-next {
+        display: none;
+      }
+      &-pagination {
+        bottom: 0;
+        &-bullet {
+          width: 8px;
+          &-active {
+            background-color: $mainSectionBGColor;
+            width: 60px;
+            border-radius: 10px;
+            transform-origin: left;
+            transition: width 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
