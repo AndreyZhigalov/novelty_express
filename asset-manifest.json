@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/novelty_express/static/css/main.df256dfa.css",
-    "main.js": "/novelty_express/static/js/main.ebf1cd17.js",
+    "main.css": "/novelty_express/static/css/main.e7e90b66.css",
+    "main.js": "/novelty_express/static/js/main.bec78da6.js",
     "static/js/787.d1d32d5d.chunk.js": "/novelty_express/static/js/787.d1d32d5d.chunk.js",
     "static/media/map.jpg": "/novelty_express/static/media/map.12dcaf36ffafedb4032d.jpg",
     "static/media/man-by-truck-guy-delivery-uniform-man-with-clipboard_1157-46192.jpg": "/novelty_express/static/media/man-by-truck-guy-delivery-uniform-man-with-clipboard_1157-46192.8d542bdb938d59ca88df.jpg",
@@ -45,8 +45,8 @@
     "static/media/form_list_blue.svg": "/novelty_express/static/media/form_list_blue.b5a8e33404472ba239da.svg",
     "static/media/form_list.svg": "/novelty_express/static/media/form_list.82dc5b0a3d5ca7a63e8b.svg",
     "static/media/search.svg": "/novelty_express/static/media/search.cdcc341f399aa61b5302580f95e9c88d.svg",
-    "static/media/chat.svg": "/novelty_express/static/media/chat.52ee0ee25830fd4e28ab00ab5d4f084b.svg",
     "index.html": "/novelty_express/index.html",
+    "static/media/chat.svg": "/novelty_express/static/media/chat.52ee0ee25830fd4e28ab00ab5d4f084b.svg",
     "static/media/fire.svg": "/novelty_express/static/media/fire.8acad757d61faa291d7a4d7badd9cfb8.svg",
     "static/media/radiation.svg": "/novelty_express/static/media/radiation.31476c4caa5d9c29c942dcd811be07a4.svg",
     "static/media/termometer.svg": "/novelty_express/static/media/termometer.1245d715d0c4d520c95e94b5ade9457e.svg",
@@ -61,12 +61,12 @@
     "static/media/close.svg": "/novelty_express/static/media/close.a9658ee23a2cd5b84292a3d449c48785.svg",
     "static/media/close_blue.svg": "/novelty_express/static/media/close_blue.03520e0b0ddd9d139d1759cc0bfcd950.svg",
     "static/media/menu.svg": "/novelty_express/static/media/menu.01254e909ffedce03c7ddc261277fc10.svg",
-    "main.df256dfa.css.map": "/novelty_express/static/css/main.df256dfa.css.map",
-    "main.ebf1cd17.js.map": "/novelty_express/static/js/main.ebf1cd17.js.map",
+    "main.e7e90b66.css.map": "/novelty_express/static/css/main.e7e90b66.css.map",
+    "main.bec78da6.js.map": "/novelty_express/static/js/main.bec78da6.js.map",
     "787.d1d32d5d.chunk.js.map": "/novelty_express/static/js/787.d1d32d5d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df256dfa.css",
-    "static/js/main.ebf1cd17.js"
+    "static/css/main.e7e90b66.css",
+    "static/js/main.bec78da6.js"
   ]
 }
