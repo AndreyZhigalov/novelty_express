@@ -6,7 +6,7 @@ import cargoBottomSnow from '../../assets/img/bgVectors/cargoBottomSnow.svg';
 
 import "./dangerousCargo.scss"
 
-const DangerousCargo = () => {
+const DangerousCargo: React.FC = () => {
   return (
     <section className="dangerous-cargo">
       <header>Перевозка радиоактивных грузов</header>

@@ -1,17 +1,17 @@
-import React from 'react'
+import React from 'react';
 
 import howRightSnow from '../../assets/img/bgVectors/howRightSnow.svg';
 import howLeftSnow from '../../assets/img/bgVectors/howLeftSnow.svg';
 import roadTrack from '../../assets/img/bgVectors/roadTrack.svg';
 import cardBgSnow from '../../assets/img/bgVectors/cardBgSnow.svg';
-import taskListCover from "../../assets/img/covers/task_list.png"
-import mapPointCover from "../../assets/img/covers/map_point.png"
-import carWithBoxiesCover from "../../assets/img/covers/car_with_boxies.png"
-import carOnARoadCover from "../../assets/img/covers/car_on_a_road.png"
+import taskListCover from '../../assets/img/covers/task_list.webp';
+import mapPointCover from '../../assets/img/covers/map_point.webp';
+import carWithBoxiesCover from '../../assets/img/covers/car_with_boxies.webp';
+import carOnARoadCover from '../../assets/img/covers/car_on_a_road.webp';
 
-import "./howWeWork.scss"
+import './howWeWork.scss';
 
-const howWeWork = () => {
+const howWeWork: React.FC = () => {
   return (
     <section className="how">
       <div className="how-background">
@@ -55,6 +55,6 @@ const howWeWork = () => {
       </figure>
     </section>
   );
-}
+};
 
 export default howWeWork;

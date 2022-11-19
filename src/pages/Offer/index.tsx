@@ -1,12 +1,10 @@
 import React from 'react'
-import Footer from '../../components/Footer'
-import OurOffer from '../../components/OurOffer'
-import Advantages from '../../components/Advantages'
-import DangerousCargo from '../../components/DangerousCargo'
+
+import { Footer , OurOffer, Advantages,DangerousCargo  } from '../../components';
 
 import "./offer.scss"
 
-const Offer = () => {
+const Offer: React.FC = () => {
   return (
     <div className='offer-page'>
         <OurOffer/>

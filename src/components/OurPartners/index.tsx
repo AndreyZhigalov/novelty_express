@@ -1,15 +1,16 @@
 import React from 'react';
 
-import bayerLogo from '../../assets/img/logos/bayer.png';
-import novartisLogo from '../../assets/img/logos/novartis.png';
-import encLogo from '../../assets/img/logos/enc.png';
-import rzdMeditsinaLogo from '../../assets/img/logos/rzd_meditsina.png';
-import emcLogo from '../../assets/img/logos/emc.png';
-import aoMeditsinaLogo from '../../assets/img/logos/ao_meditsina.png';
-import bolnitsaBaranovaLogo from '../../assets/img/logos/bolnitsa_baranova.png';
-import upbuhLogo from '../../assets/img/logos/upbuh.png';
+import bayerLogo from '../../assets/img/logos/bayer.webp';
+import novartisLogo from '../../assets/img/logos/novartis.webp';
+import encLogo from '../../assets/img/logos/enc.webp';
+import rzdMeditsinaLogo from '../../assets/img/logos/rzd_meditsina.webp';
+import emcLogo from '../../assets/img/logos/emc.webp';
+import aoMeditsinaLogo from '../../assets/img/logos/ao_meditsina.webp';
+import bolnitsaBaranovaLogo from '../../assets/img/logos/bolnitsa_baranova.webp';
+import upbuhLogo from '../../assets/img/logos/upbuh.webp';
 
 import "./ourPartners.scss"
+
 const OurPartners: React.FC = () => {
   return (
     <section className="our-partners">

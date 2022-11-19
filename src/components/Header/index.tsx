@@ -1,6 +1,5 @@
-import { useRef, useEffect } from 'react';
+import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../Redux/hooks';
-import { Link } from 'react-router-dom';
 import { setShowForm } from '../../Redux/slices/contactFormSlice';
 import {
   setSearchValue,
@@ -9,6 +8,8 @@ import {
   screenSizeCheck,
 } from '../../Redux/slices/headerSlice';
 import useScreenSize from '../../hooks/useScreenSize';
+
+import { Link } from 'react-router-dom';
 
 import logo from '../../assets/img/logo.svg';
 import menuIcon from '../../assets/img/icons/menu.svg';
@@ -19,7 +20,7 @@ import './header.scss';
 
 const Header: React.FC = () => {
   const dispatch = useAppDispatch();
-  const searchInputRef = useRef<HTMLInputElement>(null);
+  const searchInputRef = React.useRef<HTMLInputElement>(null);
   const { searchValue, showMenu, showSearch } = useAppSelector((state) => state.headerInputsSlice);
   const screenSize = useScreenSize();
 
@@ -28,7 +29,7 @@ const Header: React.FC = () => {
     dispatch(setSearchValue(text as string));
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     dispatch(screenSizeCheck(screenSize.width));
   }, [screenSize]);
 

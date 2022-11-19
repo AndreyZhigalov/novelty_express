@@ -1,12 +1,12 @@
 import React from 'react';
 
-import deliveryCover from '../../assets/img/covers/man-by-truck-guy-delivery-uniform-man-with-clipboard_1157-461921.jpg';
+import deliveryCover from '../../assets/img/covers/man-by-truck-guy-delivery-uniform-man-with-clipboard_1157-461921.webp';
 import deliveryRightSnow from '../../assets/img/bgVectors/deliveri_right_snow.svg';
 import deliveryLeftSnow from '../../assets/img/bgVectors/deliveri_left_snow.svg';
 import useScreenSize from '../../hooks/useScreenSize';
 import './whoAreWe.scss';
 
-const WhoAreWe = () => {
+const WhoAreWe: React.FC = () => {
   const [showText, setShowText] = React.useState<boolean>(false);
   const screen = useScreenSize();
   

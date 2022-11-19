@@ -5,7 +5,7 @@ import chatIcon from '../../assets/img/icons/chat.svg';
 import './footerShort.scss';
 import '../ContactForm/contactForm.scss';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="footer_short">
       <article>

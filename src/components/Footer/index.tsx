@@ -1,15 +1,15 @@
 import React from 'react';
-import { Formik } from 'formik';
-import { schema } from '../ContactForm';
 import { useAppDispatch, useAppSelector } from '../../Redux/hooks';
 import { formSelector, sendForm, SendFormStatus } from '../../Redux/slices/contactFormSlice';
+import { Formik } from 'formik';
+import { schema } from '../ContactForm';
 
 import chatIcon from '../../assets/img/icons/chat.svg';
 
 import './footer.scss';
 import '../ContactForm/contactForm.scss';
 
-const Footer = () => {
+const Footer: React.FC = () => {
     const dispatch = useAppDispatch()
     const {status} = useAppSelector(formSelector)
   return (

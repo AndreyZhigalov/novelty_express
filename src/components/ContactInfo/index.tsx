@@ -1,12 +1,13 @@
 import React from 'react'
 import useScreenSize from '../../hooks/useScreenSize';
 
-import mapCover from '../../assets/img/covers/map.jpg';
+import mapCover from '../../assets/img/covers/map.webp';
 
 import "./contactInfo.scss"
 
-const ContactInfo = () => {
+const ContactInfo: React.FC = () => {
   const screen = useScreenSize();
+
   return (
     <div className="contact-info">
       <header>Как с нами связаться?</header>

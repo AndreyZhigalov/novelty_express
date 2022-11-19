@@ -1,4 +1,3 @@
-import { Formik } from 'formik';
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../Redux/hooks';
 import {
@@ -8,9 +7,11 @@ import {
   SendFormStatus,
   setShowForm,
 } from '../../Redux/slices/contactFormSlice';
+import { Formik } from 'formik';
 import * as yup from 'yup';
 
 import close from '../../assets/img/icons/close.svg';
+
 import './contactForm.scss';
 
 export const phoneRegExp =
@@ -43,6 +44,7 @@ const ContactForm: React.FC = () => {
           }}>
           {({ values, errors, touched, handleChange, handleBlur, handleSubmit }) => (
             <form onSubmit={handleSubmit}>
+              
               <input
                 type="text"
                 name="name"

@@ -2,7 +2,7 @@ import React from 'react'
 import { useAppDispatch } from '../../Redux/hooks';
 import { setShowForm } from '../../Redux/slices/contactFormSlice';
 
-import manImage from '../../assets/img/covers/man-by-truck-guy-delivery-uniform-man-with-clipboard_1157-46192.jpg';
+import manImage from '../../assets/img/covers/man-by-truck-guy-delivery-uniform-man-with-clipboard_1157-46192.webp';
 import deliveryRightSnow from '../../assets/img/bgVectors/deliveri_right_snow.svg';
 import deliveryLeftSnow from '../../assets/img/bgVectors/deliveri_left_snow.svg';
 

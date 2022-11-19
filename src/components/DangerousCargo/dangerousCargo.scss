@@ -74,7 +74,7 @@
       }
       &::before {
         position: absolute;
-        content: url('../../assets/img/covers/car.png');
+        content: url('../../assets/img/covers/car.webp');
         bottom: -280px;
         right: 80px;
         z-index: 1;
@@ -158,7 +158,7 @@
       &:last-of-type {
         &::before {
           position: absolute;
-          content: url('../../assets/img/covers/car.png');
+          content: url('../../assets/img/covers/car.webp');
           bottom: -320px;
           left: -100px;
           right: unset;

@@ -1,22 +1,24 @@
 import React from 'react';
-import Footer from '../../components/Footer';
-import OurCarPark from '../../components/OurCarPark';
-import OurLicense from '../../components/OurLicense';
-import OurMission from '../../components/OurMission';
-import OurPartners from '../../components/OurPartners';
 
-import WhoAreWe from '../../components/WhoAreWe';
+import {
+  Footer,
+  OurCarPark,
+  OurLicense,
+  OurMission,
+  OurPartners,
+  WhoAreWe,
+} from '../../components';
 
 import './about.scss';
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <div className="about-page">
       <WhoAreWe />
       <OurMission />
-      <OurCarPark/>
+      <OurCarPark />
       <OurPartners />
-      <OurLicense/>
+      <OurLicense />
       <Footer />
     </div>
   );

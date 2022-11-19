@@ -1,22 +1,23 @@
 import React from 'react';
+import useScreenSize from '../../hooks/useScreenSize';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper';
-import useScreenSize from '../../hooks/useScreenSize';
 
 import licenseLeftSnow from '../../assets/img/bgVectors/licenseLeftSnow.svg';
 import licenseRightSnow from '../../assets/img/bgVectors/licenseRightSnow.svg';
-import licensePhoto from '../../assets/img/license/license1.jpg';
-import licensePhoto2 from '../../assets/img/license/license2.jpg';
+import licensePhoto from '../../assets/img/license/license1.webp';
+import licensePhoto2 from '../../assets/img/license/license2.webp';
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import 'swiper/scss/scrollbar';
-import "./ourLicense.scss"
+import './ourLicense.scss';
 
-const OurLicense = () => {
-  const screen = useScreenSize()
-  const [slidesCount, setSlidesCount] = React.useState<number>(2)
+const OurLicense: React.FC = () => {
+  const screen = useScreenSize();
+  const [slidesCount, setSlidesCount] = React.useState<number>(2);
 
   React.useEffect(() => {
     if (screen.width <= 680 && screen.width !== 0) {

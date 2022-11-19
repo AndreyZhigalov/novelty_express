@@ -3,11 +3,11 @@ import { useLocation } from 'react-router-dom';
 
 import fireIcon from '../../assets/img/icons/fire.svg';
 import radiation from '../../assets/img/icons/radiation.svg';
-import offerCover1 from '../../assets/img/covers/16104638528505.jpg';
-import offerCover2 from '../../assets/img/covers/16104638528501.jpg';
-import offerCover3 from '../../assets/img/covers/16104638528502.jpg';
-import offerCover4 from '../../assets/img/covers/16104638528503.jpg';
-import offerCover5 from '../../assets/img/covers/16104638528504.jpg';
+import offerCover1 from '../../assets/img/covers/16104638528505.webp';
+import offerCover2 from '../../assets/img/covers/16104638528501.webp';
+import offerCover3 from '../../assets/img/covers/16104638528502.webp';
+import offerCover4 from '../../assets/img/covers/16104638528503.webp';
+import offerCover5 from '../../assets/img/covers/16104638528504.webp';
 
 import './ourOffer.scss';
 

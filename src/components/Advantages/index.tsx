@@ -2,7 +2,7 @@ import React from 'react'
 
 import "./advantages.scss"
 
-const  Advantages = () => {
+const  Advantages: React.FC = () => {
   return (
     <section className="advantages">
       <header>Наши преимущества</header>

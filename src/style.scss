@@ -1,4 +1,4 @@
-@import "./service.scss";
+@import './service.scss';
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -8,17 +8,17 @@
 
 *::-webkit-scrollbar {
   width: 0px;
-  height: 5px; 
+  height: 5px;
 }
 
 *::-webkit-scrollbar-track {
-  background: $mainPageBGColor; 
+  background: $mainPageBGColor;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: $mainPageBGColor;
-  border-radius: 10px; 
-  border: none; 
+  border-radius: 10px;
+  border: none;
 }
 
 * {
@@ -29,6 +29,8 @@
 body {
   margin: auto;
   max-width: 1680px;
+  width: 100%;
+  height: 100%;
 }
 
 a {
@@ -40,4 +42,13 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  .loading-page {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $secondSectionBGColor;
+  }
 }

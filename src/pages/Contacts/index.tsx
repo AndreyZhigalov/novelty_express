@@ -1,10 +1,10 @@
 import React from 'react'
-import ContactInfo from '../../components/ContactInfo';
-import FooterShort from '../../components/FooterShort';
+
+import { ContactInfo ,FooterShort } from '../../components';
 
 import "./contacts.scss"
 
-const Contacts = () => {
+const Contacts: React.FC = () => {
   return (
     <div className="contacts">
       <ContactInfo/>

@@ -2,13 +2,13 @@ import React from 'react';
 
 import trackIcon from '../../assets/img/icons/track.svg';
 import lightningIcon from '../../assets/img/icons/lightning.svg';
-import handshakingCover from '../../assets/img/covers/handshaking.jpg';
+import handshakingCover from '../../assets/img/covers/handshaking.webp';
 
 import useScreenSize from '../../hooks/useScreenSize';
 
 import './ourMission.scss';
 
-const OurMission = () => {
+const OurMission: React.FC = () => {
   const [showMissionText, setShowMissionText] = React.useState<boolean>(false);
   const screen = useScreenSize();
 

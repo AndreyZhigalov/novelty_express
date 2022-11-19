@@ -1,14 +1,14 @@
 import React from 'react';
 
-import fullframeCarCover from '../../assets/img/covers/28_LADA_Largus_Termo_2.jpg';
-import conditionerCover from '../../assets/img/covers/28_LADA_Largus_Termo_4_full.jpg';
-import trunkCover from '../../assets/img/covers/28_LADA_Largus_Termo_5.jpg';
-import conditionerCoverSmall from '../../assets/img/covers/28_LADA_Largus_Termo_4.jpg';
-import trunkCoverSmall from '../../assets/img/covers/28_LADA_Largus_Termo_7.jpg';
+import fullframeCarCover from '../../assets/img/covers/28_LADA_Largus_Termo_2.webp';
+import conditionerCover from '../../assets/img/covers/28_LADA_Largus_Termo_4_full.webp';
+import trunkCover from '../../assets/img/covers/28_LADA_Largus_Termo_5.webp';
+import conditionerCoverSmall from '../../assets/img/covers/28_LADA_Largus_Termo_4.webp';
+import trunkCoverSmall from '../../assets/img/covers/28_LADA_Largus_Termo_7.webp';
 
 import './ourCarPark.scss';
 
-const OurCarPark = () => {
+const OurCarPark: React.FC = () => {
   return (
     <section className="ourCarPark">
       <header>Наш автопарк</header>

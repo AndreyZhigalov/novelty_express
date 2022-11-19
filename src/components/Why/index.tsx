@@ -1,15 +1,15 @@
 import React from 'react';
 
-import './why.scss';
-
 import barrelIcon from '../../assets/img/icons/barrel.svg';
 import termometerIcon from "../../assets/img/icons/termometer.svg"
-import box3D from "../../assets/img/covers/Credo-Cube--50-°C-4l.png"
-import ladaBack from "../../assets/img/covers/28_LADA_Largus_Termo_2.jpg"
-import ladaConditioner from '../../assets/img/covers/28_LADA_Largus_Termo_4.jpg';
-import deliveryMan from "../../assets/img/covers/28_LADA_Largus_Termo_3.jpg"
+import box3D from "../../assets/img/covers/Credo-Cube--50-°C-4l.webp"
+import ladaBack from "../../assets/img/covers/28_LADA_Largus_Termo_2.webp"
+import ladaConditioner from '../../assets/img/covers/28_LADA_Largus_Termo_4.webp';
+import deliveryMan from "../../assets/img/covers/28_LADA_Largus_Termo_3.webp"
 
-const Why = () => {
+import './why.scss';
+
+const Why: React.FC = () => {
   return (
     <section className="why">
       <header>Почему мы?</header>
