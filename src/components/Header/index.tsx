@@ -31,7 +31,7 @@ const Header: React.FC = () => {
 
   React.useEffect(() => {
     dispatch(screenSizeCheck(screenSize.width));
-  }, [screenSize]);
+  }, [screenSize.width]);
 
   const hideMenuOnClickLink = () => {
     if (screenSize.width <= 1100) {
@@ -98,6 +98,7 @@ const Header: React.FC = () => {
                   ref={searchInputRef}
                   value={searchValue}
                   onChange={onChangeInput}
+                  onKeyDown={(event) => {if(event.code === 'Enter' || event.code === "Escape") dispatch(setShowSearch())}}
                   className={showSearch ? 'search-input focused' : 'search-input'}
                 />
                 <img
