@@ -4,10 +4,14 @@
   @include sectionAlign();
   @include sectionHeader();
   @include sectionGrid();
-  grid-template-columns: repeat(auto-fit, minmax(324px, 683px));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 683px));
   grid-template-rows: 50px 1fr;
+  justify-content: center;
   gap: 30px;
   padding-bottom: 50px;
+  @media (max-width: 1280px) {
+    padding-top: 50px;
+  }
   header {
   }
   article {
@@ -16,7 +20,7 @@
     min-height: 192px;
     background: $cardBackgroundColor;
     header {
-        padding: 0 0 5px 0;
+      padding: 0 0 5px 0;
       font-weight: 700;
       font-size: 22px;
       line-height: 104%;
@@ -25,7 +29,7 @@
     }
     p {
       @include sectionText();
-      font-weight: 400;      
+      font-weight: 400;
       color: $cardTextColor;
     }
   }

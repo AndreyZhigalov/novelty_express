@@ -17,7 +17,7 @@
     background-color: #f9f9f9;
     height: 400px;
     padding: 28px;
-    width: minmax(324px, 682.51px);
+    width: minmax(320px, 682.51px);
     header {
       font-weight: 600;
       @include sectionText();
@@ -142,7 +142,7 @@
       flex-direction: column;
       @include smallCardSize();
       height: 100%;
-      width: 328px;
+      width: 320px;
       padding: 25px;
       p {
         font-size: 18px;
@@ -195,6 +195,6 @@
     display: flex;
     flex-direction: column;
     gap: 17px;
-    width: 324px;
+    width: 320px;
   }
 }

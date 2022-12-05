@@ -6,10 +6,9 @@
   @include sectionGrid();
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 100px 1fr;
-
   gap: 39px;
-  header {
-    width: 300px;
+  header {    
+    max-width: 300px;
     color: $mainTextColor;
   }
   article {
@@ -106,7 +105,10 @@
     grid-template-rows: 100px 1fr;
   }
   @media (max-width: 680px) {
-    padding: 24px 15px;
+    padding: 24px 0px;
+    header {
+      padding-left: 20px;
+    }
     article {
       div {
         height: max-content;
@@ -115,13 +117,15 @@
         background-color: transparent;
         background: transparent;
         box-shadow: none;
-
+        h2 {
+          padding-left: 20px;
+        }
         p {
           @include smallCardSize();
           background: $mainPageBGColor;
           box-shadow: $elementShadow;
           height: max-content;
-          width: 328px;
+          max-width: 320px;
           min-height: 75px;
           padding: 26px 26px 26px 59px;
           color: $mainTextColor;
@@ -131,8 +135,11 @@
             left: 24px;
           }
         }
+            
       }
+      
     }
+
     img {
       @include middleCardSize();
       object-fit: cover;

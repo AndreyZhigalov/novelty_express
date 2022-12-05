@@ -35,7 +35,7 @@ $elementShadow: 0px 4px 41px rgba(0, 0, 0, 0.05);
 }
 
 @mixin activeNavbarLinkColor {
-  font-weight: 600;
+
   font-size: 18px;
   line-height: 19px;
   color: $mainTextHoverColor;
@@ -85,7 +85,7 @@ $elementShadow: 0px 4px 41px rgba(0, 0, 0, 0.05);
 
 @mixin sectionGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: 216px 1fr;
   @media (max-width: 680px) {
     grid-template-columns: 1fr;
@@ -169,19 +169,19 @@ $elementShadow: 0px 4px 41px rgba(0, 0, 0, 0.05);
 
 @mixin middleCardSize {
   position: relative;
-  width: 324px;
+  width: 320px;
   background: $cardBackgroundColor;
   border-radius: 17px;
   overflow: hidden;
   @media (max-width: 680px) {
-    width: 324px;
+    width: 320px;
     height: 240px;
   }
 }
 
 @mixin smallCardSize {
   position: relative;
-  width: 324px;
+  width: 320px;
   height: 219px;
   border-radius: 17px;
   overflow: hidden;

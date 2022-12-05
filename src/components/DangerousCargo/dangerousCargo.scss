@@ -153,7 +153,7 @@
     article {
       padding: 24px;
       padding-bottom: 50px;
-      width: 328px;
+      min-width: 300px;
       height: max-content;
       &:last-of-type {
         &::before {
